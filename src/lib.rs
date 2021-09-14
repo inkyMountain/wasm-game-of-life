@@ -1,4 +1,4 @@
-mod utils;
+// mod utils;
 
 use wasm_bindgen::prelude::*;
 
@@ -9,27 +9,22 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
+extern "C" {
     fn alert(s: &str);
 }
 
 #[wasm_bindgen]
 pub fn greet() {
-    println!("hello")
+    alert("Hello, wasm-game-of-life!");
 }
 
 #[wasm_bindgen]
-pub fn add(a: i8, b: i8) -> i8{
-    return a + b
-}
-
-#[wasm_bindgen]
-pub fn sum(a: i8) -> i8{
-    let mut total  = 0;
+pub fn sum(a: i32) -> i32 {
+    let mut total = 0;
     let mut i = 0;
-    while i <= a {
-      total += i;
-      i = i + 1;
+    while i < a {
+        total += i;
+        i = i + 1;
     }
-    return total
+    return total;
 }
