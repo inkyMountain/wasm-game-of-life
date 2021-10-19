@@ -1,0 +1,27 @@
+{
+  "name": "wasm-game-of-life",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "rollup -w -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/inkyMountain/wasm-game-of-life.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/inkyMountain/wasm-game-of-life/issues"
+  },
+  "homepage": "https://github.com/inkyMountain/wasm-game-of-life#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.1",
+    "@wasm-tool/rollup-plugin-rust": "^1.0.7"
+  }
+}
